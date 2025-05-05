@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Engineering Branches</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(to bottom, #36d1dc, #5b86e5);
+      color: white;
+    }
+
+    nav {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+
+    nav .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    nav .nav-links a {
+      margin-left: 30px;
+      text-decoration: none;
+      color: white;
+      font-size: 18px;
+      transition: color 0.3s;
+    }
+
+    nav .nav-links a:hover {
+      color: #ffd700;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .branches-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .branch-card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(8px);
+      padding: 30px;
+      border-radius: 12px;
+      text-align: center;
+      transition: transform 0.3s, background 0.3s;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+      cursor: pointer;
+    }
+
+    .branch-card:hover {
+      transform: translateY(-8px);
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .branch-card h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .branch-card p {
+      font-size: 14px;
+      color: #e0e0e0;
+    }
+
+    .modal {
+      display: none;
+      position: sticky;
+      z-index: 2000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background: rgba(0, 0, 0, 0.7);
+      padding-top: 60px;
+    }
+
+    .modal-content {
+      background: rgba(255, 255, 255, 0.15);
+      margin: auto;
+      padding: 30px;
+      border: 1px solid #888;
+      width: 60%;
+      border-radius: 10px;
+      backdrop-filter: blur(10px);
+      color: white;
+      position: relative;
+    }
+
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      color: white;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .close:hover {
+      color: #ffd700;
+    }
+
+  </style>
+</head>
+<body>
+  <nav>
+  <div class="logo">MyEngineering</div>
+    <div class="nav-links">
+      <a href="profile.html">Profile</a>
+      <a href="settings.html">Settings</a>
+      <a href="#">About</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1 style="text-align: center;">Explore Engineering Branches & Specializations</h1>
+    <div class="branches-grid">
+
+
+      <!-- Main Branches -->
+<div class="branch-card" onclick="window.location.href='cse.html'">
+  <h3>Computer Science Engineering (CSE)</h3>
+  <p>Programming, AI, Software Development.</p>
+
+</div>
+      <div class="branch-card" onclick="window.location.href='ece.html'">
+  <h3>Electronics & Communication Engineering (ECE)</h3>
+        <p>Circuits, IoT, Embedded Systems.</p>
+        </div>
+      <div class="branch-card" onclick="window.location.href='mech.html'">
+        <h3>Mechanical Engineering</h3>
+        <p>Machines, Automotive, Robotics.</p>
+      </div>
+      <div class="branch-card" onclick="window.location.href='civil.html'">
+        <h3>Civil Engineering</h3>
+        <p>Construction, Infrastructure, Planning.</p>
+      </div>
+      <div class="branch-card" onclick="window.location.href='eee.html'">
+        <h3>Electrical Engineering (EEE)</h3>
+        <p>Power Systems, Electronics, Control Systems.</p>
+      </div>
+      <div class="branch-card" onclick="window.location.href='aerospace.html'">
+        <h3>Aerospace Engineering</h3>
+        <p>Aircraft, Spacecraft, Satellites.</p>
+      </div>
+
+      <!-- Specializations -->
+      <div class="branch-card" onclick="window.location.href='aiml.html'">
+        <h3>Artificial Intelligence and Machine Learning (AIML)</h3>
+        <p>AI, Deep Learning, ML Algorithms.</p>
+      </div>
+      <div class="branch-card" onclick="window.location.href='cse(aiml).html'">
+        <h3>CSE (AIML)</h3>
+        <p>CS Core with AI/ML specialization.</p>
+      </div>
+      <div class="branch-card" onclick="window.location.href='cs.html'">
+        <h3>Cyber Security (CS)</h3>
+        <p>Core computer fundamentals, Programming, Theory.</p>
+      </div>
+      <div class="branch-card" onclick="window.location.href='ds.html'">
+        <h3>Data Science (DS)</h3>
+        <p>Data Analytics, Big Data, Machine Learning.</p>
+      </div>
+      <div class="branch-card" onclick="window.location.href='aids.html'">
+        <h3>Artificial Intelligence and Data Science (AIDS)</h3>
+        <p>AI, Machine Learning, Big Data, Analytics.</p>
+      </div>
+
+      <!-- Newly Added -->
+      <div class="branch-card" onclick="window.location.href='ai.html'">
+        <h3>Artificial Intelligence (AI)</h3>
+        <p>Pure AI Concepts, Neural Networks, Machine Intelligence.</p>
+      </div>
+      <div class="branch-card" onclick="window.location.href='cai.html'">
+        <h3>Computer Applications and Information (CAI)</h3>
+        <p>Software Apps, Cloud Computing, Information Management.</p>
+      </div>
+      <div class="branch-card" onclick="window.location.href='it.html'">
+        <h3>Information Technology (IT)</h3>
+        <p>IT Infrastructure, Networking, Cybersecurity.</p>
+      </div>
+      <div class="branch-card" onclick="window.location.href='csd.html'">
+        <h3>Computer Science and Design (CSD)</h3>
+        <p>Blend of Computer Science with UX, UI, and Creative Design.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2 id="modal-title">Title</h2>
+      <p id="modal-description">Detailed description will appear here.</p>
+    </div>
+  </div>
+
+  <script>
+    const branchInfo = {
+      cse: { title: "Computer Science Engineering (CSE)", description: "Programming languages, software development, algorithms, AI, cybersecurity." },
+      ece: { title: "Electronics & Communication Engineering (ECE)", description: "Circuits, embedded systems, wireless technology, IoT." },
+      mech: { title: "Mechanical Engineering", description: "Design, manufacturing, robotics, thermodynamics." },
+      civil: { title: "Civil Engineering", description: "Infrastructure, construction, bridge design, architecture." },
+      eee: { title: "Electrical Engineering (EEE)", description: "Power generation, electrical circuits, control systems, renewable energy." },
+      aero: { title: "Aerospace Engineering", description: "Aircraft, spacecraft, rocket propulsion systems." },
+      aiml: { title: "Artificial Intelligence and Machine Learning (AIML)", description: "Building intelligent systems, deep learning, machine learning models." },
+      cseaiml: { title: "CSE (AIML)", description: "Computer Science Engineering with focused AI/ML specialization." },
+      cs: { title: "Computer Science (CS)", description: "Theory of computation, algorithms, operating systems." },
+      ds: { title: "Data Science (DS)", description: "Data analysis, machine learning, big data technologies." },
+      aids: { title: "Artificial Intelligence and Data Science (AIDS)", description: "Combining AI techniques with big data analytics." },
+      ai: { title: "Artificial Intelligence (AI)", description: "Focus on smart systems, machine reasoning, natural language processing." },
+      cai: { title: "Computer Applications and Information (CAI)", description: "Developing applications, managing cloud information, IT services." },
+      it: { title: "Information Technology (IT)", description: "Networks, databases, cybersecurity, software services." },
+      csd: { title: "Computer Science and Design (CSD)", description: "Integration of computer science with design thinking, UI/UX." }
+    };
+
+    function openModal(branch) {
+      document.getElementById('modal').style.display = 'block';
+      document.getElementById('modal-title').innerText = branchInfo[branch].title;
+      document.getElementById('modal-description').innerText = branchInfo[branch].description;
+    }
+
+    function closeModal() {
+      document.getElementById('modal').style.display = 'none';
+    }
+
+    window.onclick = function(event) {
+      const modal = document.getElementById('modal');
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+
+</body>
+</html>
