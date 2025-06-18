@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DSLAB</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to bottom, #36d1dc, #5b86e5);
+      color: white;
+      min-height: 100vh;
+    }
+
+    nav {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+
+    nav .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    nav .nav-links a {
+      margin-left: 30px;
+      text-decoration: none;
+      color: white;
+      font-size: 18px;
+      transition: color 0.3s;
+    }
+
+    nav .nav-links a:hover {
+      color: #ffd700;
+    }
+
+    .container {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .subject {
+      background-color: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(6px);
+      border-radius: 12px;
+      padding: 20px 25px;
+      margin-bottom: 25px;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+    }
+
+    .subject h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    .subject p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #f1f1f1;
+    }
+
+    .download-btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 8px;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .download-btn:hover {
+      background-color: rgba(255, 255, 255, 0.4);
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">MyEngineering</div>
+    <div class="nav-links">
+                </div>
+  </nav>
+
+  <div class="container">
+    <h1>DATA SCIENCE LAB</h1>
+
+ 
+    <div class="subject">
+      <h2>LIST OF EXPERIMENTS: </h2>
+
+<p>1. Creating a NumPy Array </p>
+<p>a. Basic ndarray</p> 
+<p>b. Array of zeros </p>
+<p>c. Array of ones </p>
+<p>d. Random numbers in ndarray </p>
+<p>e. An array of your choice </p>
+<p>f. Imatrix in NumPy </p>
+<p>g. Evenly spaced ndarray </p>
+<p>2. The Shape and Reshaping of NumPy Array </p>
+<p>a. Dimensions of NumPy array </p>
+<p>b. Shape of NumPy array </p>
+<p>c. Size of NumPy array </p>
+<p>d. Reshaping a NumPy array </p>
+<p>e. Flattening a NumPy array </p>
+<p>f. Transpose of a NumPy array </p>
+<p>3. Expanding and Squeezing a NumPy Array </p>
+<p>a. Expanding a NumPy array</p>
+<p>b. Squeezing a NumPy array</p>
+<p>c. Sorting in NumPy Arrays </p>
+<p>4. Indexing and Slicing of NumPy Array </p>
+<p>a. Slicing 1-D NumPy arrays </p>
+<p>b. Slicing 2-D NumPy arrays </p>
+<p>c. Slicing 3-D NumPy arrays </p>
+<p>d. Negative slicing of NumPy arrays </p>
+<p>5. Stacking and Concatenating Numpy Arrays</p> 
+<p>a. Stacking ndarrays </p>
+<p>b. Concatenating ndarrays </p>
+<p>c. Broadcasting in Numpy Arrays</p> 
+<p>6. Perform following operations using pandas </p>
+<p>a. Creating dataframe </p>
+<p>b. concat()</p>
+<p>c. Setting conditions </p>
+<p>d. Adding a new column </p>
+<p>7. Perform following operations using pandas </p>
+<p>a. Filling NaN with string </p>
+<p>b. Sorting based on column values </p>
+<p>c. groupby() </p>
+<p>8. Read the following file formats using pandas </p>
+<p>a. Text files </p>
+<p>b. CSV files </p>
+<p>c. Excel files </p>
+<p>d. JSON files </p>
+<p>9. Read the following file formats </p>
+<p>a. Pickle files </p>
+<p>b. Image files using PIL </p>
+<p>c. Multiple files using Glob</p> 
+<p>d. Importing data from database </p>
+<p>10. Demonstrate web scraping using python</p>
+<p> 11. Perform following preprocessing techniques on loan prediction dataset</p>
+<p>a. Feature Scaling</p>
+<p>b. Feature Standardization </p>
+<p>c. Label Encoding </p>
+<p>d. One Hot Encoding </p>
+<p>12. Perform following visualizations using matplotlib </p>
+<p>e. Bar Graph </p>
+<p>f. Pie Chart </p>
+<p>g. Box Plot </p>
+<p>h. Histogram </p>
+<p>i. Line Chart and Subplots </p>
+<p>j. Scatter Plot </p>
+<p>13. Getting started with NLTK, install NLTK using PIP</p>
+<p>14. Python program to implement with Python Sci Kit-Learn & NLTK </p>
+<p>15. Python program to implement with Python NLTK/Spicy/Py NLPI.</p>
+
+<a class="download-btn" href="subject-syllabus.pdf" download>Download Full PDF</a>
+</div>
+
+</body>
+</html>

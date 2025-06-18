@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PD</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to bottom, #36d1dc, #5b86e5);
+      color: white;
+      min-height: 100vh;
+    }
+
+    nav {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+
+    nav .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    nav .nav-links a {
+      margin-left: 30px;
+      text-decoration: none;
+      color: white;
+      font-size: 18px;
+      transition: color 0.3s;
+    }
+
+    nav .nav-links a:hover {
+      color: #ffd700;
+    }
+
+    .container {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .subject {
+      background-color: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(6px);
+      border-radius: 12px;
+      padding: 20px 25px;
+      margin-bottom: 25px;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+    }
+
+    .subject h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    .subject p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #f1f1f1;
+    }
+
+    .download-btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 8px;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .download-btn:hover {
+      background-color: rgba(255, 255, 255, 0.4);
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">MyEngineering</div>
+    <div class="nav-links">
+      
+          </div>
+  </nav>
+
+  <div class="container">
+    <h1>PYTHON WITH DJANGO</h1>
+
+ 
+    <div class="subject">
+      <h2>UNIT-I</h2>
+<h4>Python libraries for web development :</h4>
+ <p>Collections-Container datatypes, Tkinter-GUI applications, Requests-HTTP requests,
+BeautifulSoup4-web scraping, Scrapy, Zappa, Dash, CherryPy, Turbo Gears, Flask, Web2Py,
+Bottle, Falcon, Cubic Web, Quixote, Pyramid.</p>
+<h4>Sample Experiments:</p>
+<p>1. Write a Python GUI program to import Tkinter package and create a window. Set its
+title and add a label to the window.</p>
+<p>2. Write a Python program that designs a simple login form with labels and Entry
+widgets, arranging them in a grid using the Grid geometry manager.</p>
+<p>3. Write a program using BeautifulSoup4 library for web scraping for a given URL</p>
+<p>4. Develop a sample Hello World page using Flask framework</p>
+<p>5. Develop a sample web page using CherryPy / Web2Py / Bottle Framework</p>
+</p>
+<a class="download-btn" href="subject-syllabus.pdf" download>Download Full PDF</a>
+
+</div>
+      
+<div class="subject">
+      <h2>UNIT-II</h2>
+
+<h4> Introduction to Django Framework</h4>
+ <p>Understanding Django environment, Features of Django and Django architecture, MVC and
+MTV, Urls and Views, Mapping the views to URLs, Django Template, Template inheritance
+Django Models, Creating model for site, Converting the model into a table, Fields in Models,
+Integrating Bootstrap into Django, Creating tables, Creating grids, Creating carousels.</p>
+<h4>Sample Experiments:</h4>
+<p>6. Create a Sample “Hello World” Application using Django</p>
+<p>7. Create a Login and Registration Page using MVC architecture in Django Framework</p>
+<p>8. Create a sample page in Django by integrating BootStrap.</p>
+<p>9. Create an application with Tables, grids in Django</p>
+<p>10.Create a Django App with Carousels feature.</p>
+<a class="download-btn" href="subject-syllabus.pdf" download>Download Full PDF</a>
+</div>
+
+   <div class="subject">
+      <h2>UNIT-III</h2>
+
+
+<h4>Integrating Accounts & Authentication on Django</h4>
+ <p>Introduction to Django Authentication System, Security Problem & Solution with Django
+Creating Registration Form using Django, Adding Email Field in Forms, Configuring
+email settings, Sending emails with Django, Adding Grid Layout On Registration Page,
+Adding Page Restrictions, Login Functionality Test and Logout.</p>
+<h4>Sample Experiments:</h4>
+<p>11.Create a registration page using Authentication System</p>
+<p>12.Create an application in Django to send emails using email settings and Grid Layout</p>
+<p>13.Create an application in Django using page restriction</p>
+<p>/ authentication with Login and Logout Functionality</p>
+<p>14.Create a sample form using Django Forms</p>
+
+<a class="download-btn" href="subject-syllabus.pdf" download>Download Full PDF</a>
+</div>
+
+<div class="subject">
+      <h2>UNIT-IV</h2>
+
+<h4>Connecting SQLite with Django</h4>
+ <p>Database Migrations, Fetch Data From Database, Displaying Data On Templates, Adding
+Condition On Data,Sending data from url to view, Sending data from view to template, Saving
+objects into database, Sorting objects, Filtering objects, Deleting objects, Difference between
+session and cookie, Creating sessions and cookies in Django.</p>
+<h4>Sample Experiments:</h4>
+<p>15.Create an app in Django which fetches data from database and show as list and also
+save objects in database</p>
+<p>16.Create an app in Django for performing CRUD operations on records in a database</p>
+<p>17.Create an app in Django which uses session management and cookies to store and
+manage user sessions.</p>
+
+<a class="download-btn" href="subject-syllabus.pdf" download>Download Full PDF</a>
+</div>
+
+
+<div class="subject">
+      <h2>UNIT-V</h2>
+
+
+
+<h4>Deploying Django Web Application on Cloud</h4>
+ <p>Creating a functional website in Django, Four Important Pillars to Deploy, registering on
+Heroku and GitHub, Push project from Local System to GitHub, working with Django
+Heroku,Working with Static Root, Handling WSGI with gunicorn, setting up Database &
+adding users.</p>
+<h4>Sample Experiments:</h4>
+<p>18.Create a website in Django with login, and registration page.</p>
+<p>19.Register on GitHub, and Heroku and deploy the website on Heroku with all the
+functionalities developed.</p>
+<p>20.Configure Django to handle static files.</p>
+
+<a class="download-btn" href="subject-syllabus.pdf" download>Download Full PDF</a>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
