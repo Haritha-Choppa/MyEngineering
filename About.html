@@ -4,12 +4,19 @@
   <meta charset="UTF-8">
   <title>About</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
     body {
       background: linear-gradient(to bottom, #36d1dc, #5b86e5);
       color: white;
       min-height: 100vh;
     }
+
     nav {
       background: rgba(255, 255, 255, 0.1);
       backdrop-filter: blur(10px);
@@ -22,7 +29,12 @@
       z-index: 1000;
       box-shadow: 0 8px 16px rgba(0,0,0,0.2);
     }
-    nav .logo { font-size: 24px; font-weight: bold; }
+
+    nav .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
     nav .nav-links a {
       margin-left: 30px;
       text-decoration: none;
@@ -30,27 +42,102 @@
       font-size: 18px;
       transition: color 0.3s;
     }
-    nav .nav-links a:hover { color: #ffd700; }
+
+    nav .nav-links a:hover {
+      color: #ffd700;
+    }
+
     .container {
-      max-width: 1000px;
+      max-width: 800px;
       margin: 60px auto;
       padding: 20px;
     }
-    h1 { text-align: center; font-size: 36px; margin-bottom: 20px; }
-    p { font-size: 18px; text-align: center; }
+
+    h1 {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    label {
+      font-size: 18px;
+      display: flex;
+      flex-direction: column;
+      color: white;
+    }
+
+    input[type="email"],
+    textarea {
+      padding: 12px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      margin-top: 5px;
+      background-color: rgba(255, 255, 255, 0.2);
+      color: white;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #eee;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    button {
+      background-color: #1e90ff; /* Dodger Blue */
+      color: white;
+      font-size: 18px;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #1c86ee;
+    }
   </style>
 </head>
 <body>
   <nav>
     <div class="logo">MyEngineering</div>
     <div class="nav-links">
-      
+      <!-- Add links if needed -->
     </div>
   </nav>
 
   <div class="container">
     <h1>About This Website</h1>
-    <p><h3>Website created by Haritha Choppa /h3> </p>
+    <h3>Website created by Haritha Choppa</h3>
+<p>Do you have any doubts or any suggessions to add something about website just text a message.we will try to clear your doubt and add you suggested thoughts int this website. </p>
+    <p>Please Enter your mailId to share your Doubts,Suggestions or Advices</p>
+    <form action="https://formspree.io/f/mjkrplld" method="POST">
+      <label>
+        Your Email:
+        <input type="email" name="email" placeholder="example@email.com" required>
+      </label>
+      <label>
+        Your Doubt:
+        <textarea name="message" placeholder="Type your question here..." required></textarea>
+      </label>
+      <button type="submit">Send</button>
+    </form>
   </div>
 </body>
 </html>
