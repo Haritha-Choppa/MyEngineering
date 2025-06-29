@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BDA LAB</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to bottom, #36d1dc, #5b86e5);
+      color: white;
+      min-height: 100vh;
+    }
+
+    nav {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+
+    nav .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    nav .nav-links a {
+      margin-left: 30px;
+      text-decoration: none;
+      color: white;
+      font-size: 18px;
+      transition: color 0.3s;
+    }
+
+    nav .nav-links a:hover {
+      color: #ffd700;
+    }
+
+    .container {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .subject {
+      background-color: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(6px);
+      border-radius: 12px;
+      padding: 20px 25px;
+      margin-bottom: 25px;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+    }
+
+    .subject h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    .subject p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #f1f1f1;
+    }
+
+    .download-btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 8px;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .download-btn:hover {
+      background-color: rgba(255, 255, 255, 0.4);
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">MyEngineering</div>
+    <div class="nav-links">
+               </div>
+  </nav>
+
+  <div class="container">
+    <h1>BIG DATA ANALYTICS LAB</h1>
+
+ 
+    <div class="subject">
+      <h2>List of Experiments</h2>
+
+<h4>Experiment 1: Week 1, 2:</h4>
+<p>1. Implement the following Data structures in Java</p>
+<p>a) Linked Lists</p>
+<p> b) Stacks </p>
+<p>c) Queues </p>
+<p>d) Set </p>
+<p>e) Map</p>
+<h4>Experiment 2: Week 3:</h4>
+<p>2. (i)Perform setting up and Installing Hadoop in its three operating modes: </p>
+ <p>Standalone, Pseudo distributed, Fully distributed </p>
+ <p>(ii)Use web based tools to monitor your Hadoop setup.</p>
+<h4>Experiment 3: Week 4:</h4>
+<p>3.Implement the following file management tasks in Hadoop:</p>
+<p>• Adding files and directories </p>
+<p>• Retrieving files </p>
+<p>• Deleting files</p>
+<p>Hint: A typical Hadoop workflow creates data files (such as log files) elsewhere and copies 
+them into HDFS using one of the above command line utilities.</p>
+<h4>Experiment 4: Week 5:</h4>
+<p>4. Run a basic Word Count Map Reduce program to understand Map Reduce Paradigm.</p>
+<h4>Experiment 5: Week 6:</h4>
+<p>5. Write a map reduce program that mines weather data.</p>
+<p>Weather sensors collecting data every hour at many locations across the globe gather </p>
+<p>a large volume of log data, which is a good candidate for analysis with Map Reduce, 
+since it is semi structured and record-oriented.</p>
+<h4>Experiment 6: Week 7:</h4>
+<p>6.Use Map Reduce to find the shortest path between two people in a 
+7.social graph.</p>
+<p>Hint: Use an adjacency list to model a graph, and for each node store the distance from the 
+original node, as well as a back pointer to the original node. Use the mappers to propagate the 
+distance to the original node, and the reducer to restore the state of the graph. Iterate until the 
+target node has been reached.</p>
+<h4>Experiment 7: Week 8:</h4>
+<p>8. Implement Friends-of-friends algorithm in Map Reduce.</h4>
+<p>Hint: Two Map Reduce jobs are required to calculate the FoFs for each user in a social 
+network .The first job calculates the common friends for each user, and the second job sorts 
+the common friends by the number of connections to your friends.</p>
+<h4>Experiment 8: Week 9:</h4>
+<p>9. Implement an iterative PageRank graph algorithm in Map Reduce.</p> 
+<p>Hint: PageRank can be implemented by iterating a Map Reduce job until the graph has 
+converged. The mappers are responsible for propagating node PageRank values to their</p>
+<h4>Experiment 9: Week 10:</h4>
+<p>10. Perform an efficient semi-join in Map Reduce.</p>
+<p>Hint: Perform a semi-join by having the mappers load a Bloom filter from the 
+Distributed Cache, and then filter results from the actual Map Reduce data source by 
+performing membership queries against the Bloom filter to determine which data 
+source records should be emitted to the reducers.</p>
+<h4>Experiment 10: Week 11:</h4>
+<p>11. Install and Run Pig then write Pig Latin scripts to sort, group, join, project, 
+and filter your data.</p>
+<h4>Experiment 12: Week 12:</h4>
+<p>12. Install and Run Hive then use Hive to create, alter, and drop databases, tables, 
+views, functions, and indexes</p>
+
+<a class="download-btn" href="subject-syllabus.pdf" download>Download Full PDF</a>
+</div>
+   
+
+</body>
+</html>

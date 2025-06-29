@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NLP LAB</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to bottom, #36d1dc, #5b86e5);
+      color: white;
+      min-height: 100vh;
+    }
+
+    nav {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+
+    nav .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    nav .nav-links a {
+      margin-left: 30px;
+      text-decoration: none;
+      color: white;
+      font-size: 18px;
+      transition: color 0.3s;
+    }
+
+    nav .nav-links a:hover {
+      color: #ffd700;
+    }
+
+    .container {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .subject {
+      background-color: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(6px);
+      border-radius: 12px;
+      padding: 20px 25px;
+      margin-bottom: 25px;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+    }
+
+    .subject h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    .subject p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #f1f1f1;
+    }
+
+    .download-btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 8px;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .download-btn:hover {
+      background-color: rgba(255, 255, 255, 0.4);
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">MyEngineering</div>
+    <div class="nav-links">
+               </div>
+  </nav>
+
+  <div class="container">
+    <h1>NATURAL LANGUAGE 
+PROCESSING LAB</h1>
+
+ 
+    <div class="subject">
+      <h2>List of Experiments:</h2>
+
+<p>1. Installation and exploring features of NLTK and spa Cytools. Download Word Cloud
+and few corpora.</p>
+<p>2. (i)Write a program to implement word Tokenizer, Sentence and Paragraph Tokenizers.</p>
+<p>(ii) Check how many words are there in any corpus. Also check how many distinct
+words are there?</p>
+<p>3. (i)Write a program to implement both user-defined and pre-defined functions to generate</p>
+<p>(a) Uni-grams</p>
+<p>(b) Bi-grams</p>
+<p>(c) Tri-grams</p>
+<p>(d) N-grams</p>
+<p>(ii)Write a program to calculate the highest probability of a word(w2) occurring after another word(w1).</p>
+<p>4. (i) Write a program to identify the word collocations.</p>
+<p>(ii) Write a program to print all words beginning with a given sequence of letters.</p>
+<p>(iii) Write a program to print all words longer than four characters.</p>
+<p>5. (i) Write a program to identify the mathematical expression in a given sentence.</p>
+<p>(ii)Write a program to identify different components of an email address.</p>
+<p>6. (i) Write a program to identify all antonyms and synonym sofa word.</p>
+<p>(ii) Write a program to find hyponymy, homonymy, polyse my for a given word.</p>
+<p>7. (i) Write a program to find all the stop words in any given text.</p>
+<p>(ii) Write a function that finds the 50 most frequently occurring words of a text
+that are not stop words.</p>
+<p>8. Write a program to implement various stemming techniques and prepare a chart with the 
+performance of each method.</p>
+<p>9. Write a program to implement various lemmatization techniques and prepare a chart with the performance of each method</p>
+<p>10. (i)Write a program to implement Conditional Frequency Distributions (CFD) for any corpus.</p>
+<p>(ii)Find all the four-letter words in any corpus. With the help of a frequency distribution (Freq Dist), show these words in decreasing order of frequency.</p>
+<p>(iii) Define a conditional frequency distribution over the names corpus that allows you to see which initial letters are more frequent for males versus females.</p>
+<p>11. (i) Write a program to implement Part-of-Speech (PoS) tagging for any corpus.</p>
+<p>(ii) Write a program to identify which word has the greatest number of distinct
+tags? What are they, and what do they represent?</p>
+<p>(iii) Write a program to list tags in order of decreasing frequency and what do the 20
+most frequent tags represent?</p>
+<p>(iv) Write a program to identify which tags are nouns most commonly found after?</p>
+<p>What do these tags represent?</p>
+<p>12. Write a program to implement TF-IDF for any corpus.</p>
+<p>13. Write a program to implement chunking and chinking for any corpus.</p>
+<p>14. (i)Write a program to find all the misspelled words in a paragraph.</p>
+<p>(ii)Write a program to prepare a table with frequency of misspelled tags for any given 
+text.</p>
+<p>15. Write a program to implement all the NLP Pre-Processing Techniques required to
+perform further NLP tasks.</p>
+
+<h4>Case Studies: </h4><p>(At Least any one Case Study has to be performed)</p>
+<h4>Case Study-1.</h4> <p>Write a program to implement Named Entity Recognition(NER) for any 
+corpus.</p>
+<h4>Case Study-2.</h4> <p>Write a program to perform Auto-Correction of spellings for any text.</p>
+<h4>Case Study-3.</h4> <p>Check for all positive words in a news article/ any text.</p>
+<a class="download-btn" href="subject-syllabus.pdf" download>Download Full PDF</a>
+</div>
+   
+
+</body>
+</html>
