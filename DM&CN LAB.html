@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DATA MINING  AND COMPUTER NETWORKS LAB </title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to bottom, #36d1dc, #5b86e5);
+      color: white;
+      min-height: 100vh;
+    }
+
+    nav {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+
+    nav .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    nav .nav-links a {
+      margin-left: 30px;
+      text-decoration: none;
+      color: white;
+      font-size: 18px;
+      transition: color 0.3s;
+    }
+
+    nav .nav-links a:hover {
+      color: #ffd700;
+    }
+
+    .container {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .subject {
+      background-color: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(6px);
+      border-radius: 12px;
+      padding: 20px 25px;
+      margin-bottom: 25px;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+    }
+
+    .subject h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    .subject p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #f1f1f1;
+    }
+
+    .download-btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 8px;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .download-btn:hover {
+      background-color: rgba(255, 255, 255, 0.4);
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">MyEngineering</div>
+    <div class="nav-links">
+                </div>
+  </nav>
+
+  <div class="container">
+    <h1>DATA MINING  AND COMPUTER NETWORKS LAB </h1>
+
+ 
+    <div class="subject">
+      <h3>DATA MINING LAB </h3>
+<h4>List of Experiments: </h4>
+<p>1. Creation of a Data Warehouse. </p>
+<p> Build Data Warehouse/Data Mart (using open source tools like Pentaho Data Integration Tool, 
+Pentaho Business Analytics; or other data warehouse tools like Microsoft-SSIS, Informatica, Business 
+Objects,etc.,) </p>
+<p> Design multi-dimensional data models namely Star, Snowflake and Fact Constellation schemas for 
+any one enterprise (ex. Banking, Insurance, Finance, Healthcare, manufacturing, Automobiles, sales 
+etc). </p>
+<p> Write ETL scripts and implement using data warehouse tools. </p>
+<p> Perform Various OLAP operations such slice, dice, roll up, drill up and pivot </p>
+<p>2. Explore machine learning tool “WEKA”  </p>
+<p> Explore WEKA Data Mining/Machine Learning Toolkit. </p>
+<p> Downloading and/or installation of WEKA data mining toolkit. </p> 
+<p> Understand the features of WEKA toolkit such as Explorer, Knowledge Flow 
+interface, Experimenter, command-line interface.</p>  
+ Navigate the options available in the WEKA (ex. Select attributes panel, 
+Preprocess panel, Classify panel, Cluster panel, Associate panel and Visualize 
+panel) </p>
+<p> Study the arff file format Explore the available data sets in WEKA. Load a data 
+set (ex. Weather dataset, Iris dataset, etc.)  </p>
+<p> Load each dataset and observe the following:  </p>
+<p>1. List the attribute names and they types </p> 
+<p>2. Number of records in each dataset  </p>
+<p>3. Identify the class attribute (if any)</p>  
+<p>4. Plot Histogram  </p>
+<p>5. Determine the number of records for each class. </p> 
+<p>6. Visualize the data in various dimensions </p>
+<p>3. Perform data preprocessing tasks and Demonstrate performing association rule 
+mining on data sets   </p>
+<p> Explore various options available in Weka for preprocessing data and apply    
+Unsupervised filters like Discretization, Resample filter, etc. on each dataset</p>  
+<p> Load weather. nominal, Iris, Glass datasets into Weka and run Apriori     
+Algorithm with different support and confidence values. </p> 
+<p> Study the rules generated. Apply different discretization filters on numerical 
+attributes and run the Apriori association rule algorithm. Study the rules 
+generated.</p>  
+<p> Derive interesting insights and observe the effect of discretization in the 
+rule   generation process. </p>
+<p>4. Demonstrate performing classification on data sets Weka/R </p>
+<p> Load each dataset and run 1d3, J48 classification algorithm. Study the 
+classifier output. Compute entropy values, Kappa statistic.  </p>
+<p> Extract if-then rules from the decision tree generated by the classifier, Observe 
+the confusion matrix.  </p>
+<p> Load each dataset into Weka/R and perform Naïve-bayes classification and k
+Nearest Neighbour classification. Interpret the results obtained.  </p>
+<p> Plot RoC Curves </p> 
+<p> Compare classification results of ID3, J48, Naïve-Bayes and k-NN classifiers for 
+each dataset, and deduce which classifier is performing best and poor for each 
+dataset and justify. </p>
+<p>5. Demonstrate performing clustering of data sets </p> 
+<p> Load each dataset into Weka/R and run simple k-means clustering algorithm 
+with different values of k (number of desired clusters).  </p>
+<p> Study the clusters formed. Observe the sum of squared errors and centroids, and derive insights. </p> 
+<p> Explore other clustering techniques available in Weka/R.  </p>
+<p> Explore visualization features of Weka/R to visualize the clusters. Derive interesting insights and 
+explain. </p>
+<p>6. Demonstrate knowledge flow application on data sets into Weka/R </p>
+<p> Develop a knowledge flow layout for finding strong association rules by using Apriori, FP Growth  
+algorithms  </p>
+<p> Set up the knowledge flow to load an ARFF (batch mode) and perform a cross validation using J48    
+algorithm  </p>
+<p>Demonstrate plotting multiple ROC curves in the same plot window by using j48 and Random forest  
+Tree </p>
+<p> Demonstrate ZeroR technique on Iris dataset (by using necessary preprocessing technique(s)) and  
+share your observations</p> 
+<p> Write a java program to prepare a simulated data set with unique instances. </p>
+<p> Write a Python program to generate frequent item sets / association rules using Apriori algorithm  </p>
+<p> Write a program to calculate chi-square value using Python/R. Report your observation. </p>
+<p> Write a program of Naive Bayesian classification using Python/R programming language. </p>
+<p> Implement a Java/R program to perform Apriori algorithm </p>
+<p> Write a R program to cluster your choice of data using simple k-means algorithm using  JDK </p>
+<p> Write a program of cluster analysis using simple k-means algorithm Python/R programming  
+language. </p>
+<p> Write a program to compute/display dissimilarity matrix (for your own dataset containing at least  
+four instances with two attributes) using Python </p>
+<p> Visualize the datasets using matplotlib in python/R.(Histogram, Box plot, Bar chart, Pie chart etc.,) </p>
+
+<br>
+<h3>COMPUTER NETWORKS LAB</h3>
+<h4>List of Experiments:</h4>  
+<p>1. Study of Network devices in detail and connect the computers in Local Area Network. </p>
+<p>2. Write a Program to implement the data link layer farming methods such as</p>  
+<p>i) Character stuffing </p>
+<p>ii) bit stuffing. </p>
+<p>3. Write a Program to implement data link layer farming method checksum. </p>
+<p>4. Write a program for Hamming Code generation for error detection and correction.  </p>
+<p>5. Write a Program to implement on a data set of characters the three CRC polynomials – CRC 12, 
+CRC 16 and CRC CCIP. </p> 
+<p>6. Write a Program to implement Sliding window protocol for Goback N. </p>
+<p>7. Write a Program to implement Sliding window protocol for Selective repeat.</p> 
+<p>8. Write a Program to implement Stop and Wait Protocol. </p>
+<p>9. Write a program for congestion control using leaky bucket algorithm </p>
+<p>10. Write a Program to implement Dijkstra‘s algorithm to compute the Shortest path through a graph. </p> 
+<p>11. Write a Program to implement Distance vector routing algorithm by obtaining routing table at each 
+node (Take an example subnet graph with weights indicating delay between nodes).  </p>
+<p>12. Write a Program to implement Broadcast tree by taking subnet of hosts.  </p>
+<p>13. Wireshark</p> 
+<p>i. Packet Capture Using Wire shark  </p>
+<p>ii. Starting Wire shark</p>  
+<p>iii. Viewing Captured Traffic  
+<p>iv. Analysis and Statistics & Filters. </p>
+<p>14. How to run Nmap scan </p>
+<p>15. Operating System Detection using Nmap </p>
+<p>16. Do the following using NS2 Simulator  </p>
+<p>i. NS2 Simulator-Introduction  </p>
+<p>ii. Simulate to Find the Number of Packets Dropped  </p>
+<p>iii. Simulate to Find the Number of Packets Dropped by TCP/UDP </p>
+<p>iv. Simulate to Find the Number of Packets Dropped due to Congestion </p> 
+<p>v. Simulate to Compare Data Rate& Throughput. </p>
+</div>
+</body>
+</html></title>
+  
