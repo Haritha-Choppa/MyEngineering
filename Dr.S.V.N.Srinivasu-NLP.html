@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>NLP</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NLP – Dr. S.V.N. Srinivasu | NEC MyEngineering</title>
+  <meta name="description"
+    content="Natural Language Processing course materials by Dr. S.V.N. Srinivasu – unit-wise notes and PDF downloads.">
   <style>
     * {
       margin: 0;
@@ -15,8 +19,11 @@
       background: linear-gradient(to bottom, #36d1dc, #5b86e5);
       color: white;
       min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
 
+    /* ── NAV ── */
     nav {
       background: rgba(255, 255, 255, 0.1);
       backdrop-filter: blur(10px);
@@ -27,12 +34,22 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     }
 
     nav .logo {
       font-size: 24px;
       font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    nav .logo img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
     }
 
     nav .nav-links a {
@@ -47,10 +64,181 @@
       color: #ffd700;
     }
 
-    .container {
+    /* ── LAYOUT ── */
+    .page-layout {
+      display: flex;
+      flex: 1;
+    }
+
+    /* ── SIDEBAR ── */
+    .sidebar {
+      width: 270px;
+      min-width: 270px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-right: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 28px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      position: sticky;
+      top: 63px;
+      height: calc(100vh - 63px);
+      overflow-y: auto;
+    }
+
+    .sidebar::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    .sidebar::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 4px;
+    }
+
+    /* Faculty Card */
+    .faculty-card {
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 12px;
+      padding: 20px 14px;
+      text-align: center;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+    }
+
+    .faculty-avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      font-weight: bold;
+      color: white;
+      margin: 0 auto 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .faculty-name {
+      font-size: 14px;
+      font-weight: bold;
+      color: #fff;
+      margin-bottom: 6px;
+      line-height: 1.3;
+    }
+
+    .faculty-dept {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.75);
+      margin-bottom: 4px;
+    }
+
+    .faculty-college {
+      font-size: 11px;
+      color: #ffd700;
+      font-weight: bold;
+    }
+
+    /* Sidebar Section Heading */
+    .sidebar-heading {
+      font-size: 11px;
+      font-weight: bold;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.6);
+      padding-left: 4px;
+      margin-bottom: 6px;
+    }
+
+    /* Unit Nav */
+    .unit-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .unit-nav a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 12px;
+      border-radius: 8px;
+      text-decoration: none;
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 14px;
+      transition: background 0.25s, color 0.25s;
+    }
+
+    .unit-nav a:hover,
+    .unit-nav a.active {
+      background: rgba(255, 255, 255, 0.2);
+      color: #fff;
+    }
+
+    .unit-nav a .unit-badge {
+      width: 26px;
+      height: 26px;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: bold;
+      color: white;
+      flex-shrink: 0;
+    }
+
+    /* Quick Links */
+    .quick-links {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .quick-links a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 12px;
+      border-radius: 8px;
+      text-decoration: none;
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 13px;
+      transition: background 0.25s;
+    }
+
+    .quick-links a:hover {
+      background: rgba(255, 255, 255, 0.2);
+      color: #fff;
+    }
+
+    /* ── SIDEBAR TOGGLE (mobile) ── */
+    .sidebar-toggle {
+      display: none;
+      position: fixed;
+      bottom: 24px;
+      left: 24px;
+      z-index: 999;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.25);
+      border: none;
+      cursor: pointer;
+      font-size: 22px;
+      color: white;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* ── MAIN CONTENT ── */
+    .main-content {
+      flex: 1;
       padding: 60px 20px;
-      max-width: 900px;
-      margin: 0 auto;
+      max-width: 860px;
     }
 
     h1 {
@@ -65,7 +253,8 @@
       border-radius: 12px;
       padding: 20px 25px;
       margin-bottom: 25px;
-      box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+      scroll-margin-top: 80px;
     }
 
     .subject h2 {
@@ -89,7 +278,7 @@
       font-weight: bold;
       text-decoration: none;
       transition: background 0.3s;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
       margin-top: 30px;
       text-align: center;
     }
@@ -97,65 +286,367 @@
     .download-btn:hover {
       background-color: rgba(255, 255, 255, 0.4);
     }
+
+    .btn-group {
+      display: flex;
+      gap: 12px;
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
+
+    .view-btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 8px;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .view-btn:hover {
+      background-color: rgba(255, 255, 255, 0.25);
+    }
+
+    /* ── VIDEO LECTURES ── */
+    .section-title {
+      font-size: 26px;
+      font-weight: bold;
+      margin: 40px 0 20px;
+      text-align: center;
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    .video-card {
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .video-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    }
+
+    .video-thumb {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%;
+      background: rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+    }
+
+    .video-thumb iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .video-info {
+      padding: 12px 14px;
+    }
+
+    .video-info h4 {
+      font-size: 14px;
+      font-weight: bold;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+
+    .video-info p {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .sidebar {
+        position: fixed;
+        left: -280px;
+        top: 0;
+        height: 100vh;
+        z-index: 900;
+        transition: left 0.3s ease;
+        padding-top: 80px;
+      }
+
+      .sidebar.open {
+        left: 0;
+        box-shadow: 4px 0 20px rgba(0, 0, 0, 0.4);
+      }
+
+      .sidebar-toggle {
+        display: flex;
+      }
+
+      .main-content {
+        padding: 30px 16px;
+      }
+
+      h1 {
+        font-size: 26px;
+      }
+    }
   </style>
 </head>
+
 <body>
 
+  <!-- NAV -->
   <nav>
-    <div class="logo">NEC_MyEngineering</div>
+    <div class="logo">
+      <img src="preview.png" alt="Logo" onerror="this.style.display='none'">
+      NEC_MyEngineering
+    </div>
     <div class="nav-links">
-               </div>
+      <a href="index.HTML">Home</a>
+    </div>
   </nav>
 
-  <div class="container">
-    <h1>Faculty Name : Dr.S.V.N.Srinivasu<h1>
-    <h1>NATURAL LANGUAGE 
-PROCESSING</h1>
+  <!-- PAGE LAYOUT -->
+  <div class="page-layout">
 
- 
-    <div class="subject">
-      <h2>UNIT-I </h2>
-<H4>INTRODUCTION:</h4> <p>Origins and challenges of NLP – Language Modelling: 
-Grammar-based LM, Statistical LM – Regular Expressions, Finite-State Automata – English Morphology, Transducers for lexicon and rules, Tokenization, Detecting and Correcting Spelling Errors, Minimum Edit Distance.</p>
-<a class="download-btn" href="https://drive.google.com/file/d/1bKUM_YwzPVeH-caLh6VWd8QFbTeHd9S8/view?usp=sharing" download>Download Full PDF</a>
-</div>
+    <!-- ══ SIDEBAR ══ -->
+    <aside class="sidebar" id="sidebar">
 
-<div class="subject">
-      <h2>UNIT-II</h2>
+      <!-- Faculty Profile -->
+      <div class="faculty-card">
+        <div class="faculty-avatar">S</div>
+        <div class="faculty-name">Dr. S.V.N. Srinivasu</div>
+        <div class="faculty-dept">Dept. of Computer Science &amp; Engineering</div>
+        <div class="faculty-college">NEC – MyEngineering</div>
+      </div>
 
-<H4>WORD LEVEL ANALYSIS:</h4> <p>Unsmoothed N-grams, Evaluating N-grams, 
-Smoothing, Interpolation and Backoff – Word Classes, Part- of-Speech Tagging, Rule-based, Stochastic and Transformation-based tagging, Issues in PoS tagging – Hidden Markov and Maximum Entropy models.</p>
-<a class="download-btn" href="https://drive.google.com/file/d/1GP7iMiDN3YGOUxEkmU7j00y7rGBxaYp7/view?usp=sharing" download>Download Full PDF</a>
-</div>
+      <!-- Unit Navigation -->
+      <div>
+        <div class="sidebar-heading">Course Units</div>
+        <nav class="unit-nav">
+          <a href="#unit1"><span class="unit-badge">I</span> Introduction &amp; LM</a>
+          <a href="#unit2"><span class="unit-badge">II</span> Word Level Analysis</a>
+          <a href="#unit3"><span class="unit-badge">III</span> Syntactic Analysis</a>
+          <a href="#unit4"><span class="unit-badge">IV</span> Semantics &amp; Pragmatics</a>
+          <a href="#unit5"><span class="unit-badge">V</span> Discourse &amp; Lexical</a>
+        </nav>
+      </div>
 
-<div class="subject">
-      <h2>UNIT-III</h2>
+      <!-- Quick Links -->
+      <div>
+        <div class="sidebar-heading">Quick Links</div>
+        <nav class="quick-links">
+          <a href="#videos"> Video Lectures</a>
+          <a href="NLP LAB.html"> NLP Lab</a>
+          <a href="index.HTML">Home</a>
+          <a href="CODING PALATFORMS.html">Coding Platforms</a>
+        </nav>
+      </div>
 
-<h4>SYNTACTIC ANALYSIS:</h4> <p>Context-Free Grammars, Grammar rules for English, 
-Treebanks, Normal Forms for grammar – Dependency Grammar – Syntactic Parsing, 
-Ambiguity, Dynamic Programming parsing – Shallow parsing Probabilistic CFG, 
-Probabilistic CYK, Probabilistic Lexicalized CFGs – Feature structures, Unification of feature structures</p>
-<a class="download-btn" href="https://drive.google.com/file/d/1G95_AyKqGxOHOIwq6_hcktQdZdezhAJj/view?usp=sharing" download>Download Full PDF</a>
-</div>
+    </aside>
 
-<div class="subject">
-      <h2>UNIT- IV</h2>
+    <!-- ══ MAIN CONTENT ══ -->
+    <main class="main-content">
 
-<h4>SEMANTICS AND PRAGMATICS:</h4> <p>Requirements for representation, FirstOrder Logic, Description Logics – Syntax-Driven Semantic analysis, Semantic attachments –Word Senses, Relations between Senses, Thematic Roles, selectional restrictions – Word Sense Disambiguation, WSD using Supervised, Dictionary & Thesaurus, Bootstrapping 
-methods – Word Similarity using Thesaurus and Distributional methods.</p>
-<a class="download-btn" href="https://drive.google.com/file/d/137DktdR7YQcVmK6nytMfFyhmbhhNFPFE/view?usp=sharing" download>Download Full PDF</a>
-</div>
+      <h1>Faculty Name : Dr.S.V.N.Srinivasu</h1>
+      <h1>NATURAL LANGUAGE PROCESSING</h1>
 
-<div class="subject">
-      <h2>UNIT V </h2>
+      <!-- UNIT I -->
+      <div class="subject" id="unit1">
+        <h2>UNIT-I</h2>
+        <H4>INTRODUCTION:</H4>
+        <p>Origins and challenges of NLP – Language Modelling:
+          Grammar-based LM, Statistical LM – Regular Expressions, Finite-State Automata – English Morphology,
+          Transducers for lexicon and rules, Tokenization, Detecting and Correcting Spelling Errors, Minimum Edit
+          Distance.</p>
+        <div class="btn-group">
+          <a class="view-btn" href="https://drive.google.com/file/d/1bKUM_YwzPVeH-caLh6VWd8QFbTeHd9S8/view?usp=sharing"
+            target="_blank">👁 View PDF</a>
+          <a class="download-btn"
+            href="https://drive.google.com/uc?export=download&id=1bKUM_YwzPVeH-caLh6VWd8QFbTeHd9S8">⬇ Download PDF</a>
+        </div>
+      </div>
 
-<h4>DISCOURSE ANALYSIS AND LEXICAL RESOURCES:</h4> <p>Discourse 
-segmentation, Coherence – Reference Phenomena, Anaphora Resolution using Hobbs and 
-Centering Algorithm – Coreference Resolution – Resources: Porter Stemmer, Lemmatizer, Penn Treebank, Brill’s Tagger, WordNet, PropBank, FrameNet, Brown Corpus, British National Corpus (BNC).</p>
+      <!-- UNIT II -->
+      <div class="subject" id="unit2">
+        <h2>UNIT-II</h2>
+        <H4>WORD LEVEL ANALYSIS:</H4>
+        <p>Unsmoothed N-grams, Evaluating N-grams,
+          Smoothing, Interpolation and Backoff – Word Classes, Part-of-Speech Tagging, Rule-based, Stochastic and
+          Transformation-based tagging, Issues in PoS tagging – Hidden Markov and Maximum Entropy models.</p>
+        <div class="btn-group">
+          <a class="view-btn" href="https://drive.google.com/file/d/1GP7iMiDN3YGOUxEkmU7j00y7rGBxaYp7/view?usp=sharing"
+            target="_blank">👁 View PDF</a>
+          <a class="download-btn"
+            href="https://drive.google.com/uc?export=download&id=1GP7iMiDN3YGOUxEkmU7j00y7rGBxaYp7">⬇ Download PDF</a>
+        </div>
+      </div>
 
-<a class="download-btn" href="https://drive.google.com/file/d/114kCsxGwaGMzo7Bvt-YQJ4TMFQ_T1H32/view?usp=sharing" download>Download Full PDF</a>
-</div>
-   
+      <!-- UNIT III -->
+      <div class="subject" id="unit3">
+        <h2>UNIT-III</h2>
+        <h4>SYNTACTIC ANALYSIS:</h4>
+        <p>Context-Free Grammars, Grammar rules for English,
+          Treebanks, Normal Forms for grammar – Dependency Grammar – Syntactic Parsing,
+          Ambiguity, Dynamic Programming parsing – Shallow parsing Probabilistic CFG,
+          Probabilistic CYK, Probabilistic Lexicalized CFGs – Feature structures, Unification of feature structures.</p>
+        <div class="btn-group">
+          <a class="view-btn" href="https://drive.google.com/file/d/1G95_AyKqGxOHOIwq6_hcktQdZdezhAJj/view?usp=sharing"
+            target="_blank">👁 View PDF</a>
+          <a class="download-btn"
+            href="https://drive.google.com/uc?export=download&id=1G95_AyKqGxOHOIwq6_hcktQdZdezhAJj">⬇ Download PDF</a>
+        </div>
+      </div>
+
+      <!-- UNIT IV -->
+      <div class="subject" id="unit4">
+        <h2>UNIT-IV</h2>
+        <h4>SEMANTICS AND PRAGMATICS:</h4>
+        <p>Requirements for representation, First-Order Logic, Description Logics – Syntax-Driven Semantic analysis,
+          Semantic attachments – Word Senses, Relations between Senses, Thematic Roles, selectional restrictions –
+          Word Sense Disambiguation, WSD using Supervised, Dictionary &amp; Thesaurus, Bootstrapping
+          methods – Word Similarity using Thesaurus and Distributional methods.</p>
+        <div class="btn-group">
+          <a class="view-btn" href="https://drive.google.com/file/d/137DktdR7YQcVmK6nytMfFyhmbhhNFPFE/view?usp=sharing"
+            target="_blank">👁 View PDF</a>
+          <a class="download-btn"
+            href="https://drive.google.com/uc?export=download&id=137DktdR7YQcVmK6nytMfFyhmbhhNFPFE">⬇ Download PDF</a>
+        </div>
+      </div>
+
+      <!-- UNIT V -->
+      <div class="subject" id="unit5">
+        <h2>UNIT-V</h2>
+        <h4>DISCOURSE ANALYSIS AND LEXICAL RESOURCES:</h4>
+        <p>Discourse segmentation, Coherence – Reference Phenomena, Anaphora Resolution using Hobbs and
+          Centering Algorithm – Coreference Resolution – Resources: Porter Stemmer, Lemmatizer, Penn Treebank,
+          Brill's Tagger, WordNet, PropBank, FrameNet, Brown Corpus, British National Corpus (BNC).</p>
+        <div class="btn-group">
+          <a class="view-btn" href="https://drive.google.com/file/d/114kCsxGwaGMzo7Bvt-YQJ4TMFQ_T1H32/view?usp=sharing"
+            target="_blank">👁 View PDF</a>
+          <a class="download-btn"
+            href="https://drive.google.com/uc?export=download&id=114kCsxGwaGMzo7Bvt-YQJ4TMFQ_T1H32">⬇ Download PDF</a>
+        </div>
+      </div>
+
+      <!-- VIDEO LECTURES -->
+      <div id="videos">
+        <h2 class="section-title">🎬 Video Lectures</h2>
+        <div class="video-grid">
+
+          <div class="video-card">
+            <div class="video-thumb">
+              <iframe src="https://www.youtube.com/embed/videoseries?list=PLZoTAELRMXVMdJ5sqbCK2LiM0HhQVWNzm"
+                allowfullscreen></iframe>
+            </div>
+            <div class="video-info">
+              <h4>Unit I – Introduction to NLP</h4>
+              <p>Origins, Language Models, FSA, Tokenization</p>
+            </div>
+          </div>
+
+          <div class="video-card">
+            <div class="video-thumb">
+              <iframe src="https://www.youtube.com/embed/videoseries?list=PLZoTAELRMXVMdJ5sqbCK2LiM0HhQVWNzm"
+                allowfullscreen></iframe>
+            </div>
+            <div class="video-info">
+              <h4>Unit II – Word Level Analysis</h4>
+              <p>N-grams, POS Tagging, HMM</p>
+            </div>
+          </div>
+
+          <div class="video-card">
+            <div class="video-thumb">
+              <iframe src="https://www.youtube.com/embed/videoseries?list=PLZoTAELRMXVMdJ5sqbCK2LiM0HhQVWNzm"
+                allowfullscreen></iframe>
+            </div>
+            <div class="video-info">
+              <h4>Unit III – Syntactic Analysis</h4>
+              <p>CFG, Parsing, Treebanks, PCFG</p>
+            </div>
+          </div>
+
+          <div class="video-card">
+            <div class="video-thumb">
+              <iframe src="https://www.youtube.com/embed/videoseries?list=PLZoTAELRMXVMdJ5sqbCK2LiM0HhQVWNzm"
+                allowfullscreen></iframe>
+            </div>
+            <div class="video-info">
+              <h4>Unit IV – Semantics &amp; Pragmatics</h4>
+              <p>FOL, WSD, Word Similarity</p>
+            </div>
+          </div>
+
+          <div class="video-card">
+            <div class="video-thumb">
+              <iframe src="https://www.youtube.com/embed/videoseries?list=PLZoTAELRMXVMdJ5sqbCK2LiM0HhQVWNzm"
+                allowfullscreen></iframe>
+            </div>
+            <div class="video-info">
+              <h4>Unit V – Discourse &amp; Lexical</h4>
+              <p>Anaphora, Coreference, WordNet</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- Mobile Sidebar Toggle -->
+  <button class="sidebar-toggle" id="sidebarToggle" onclick="toggleSidebar()" aria-label="Toggle Sidebar">☰</button>
+
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.getElementById('sidebar');
+      sidebar.classList.toggle('open');
+      document.getElementById('sidebarToggle').textContent = sidebar.classList.contains('open') ? '✕' : '☰';
+    }
+
+    // Scroll-spy: highlight active unit in sidebar
+    const sections = document.querySelectorAll('.subject[id]');
+    const navLinks = document.querySelectorAll('.unit-nav a');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === '#' + entry.target.id) {
+              link.classList.add('active');
+            }
+          });
+        }
+      });
+    }, { rootMargin: '-30% 0px -60% 0px' });
+
+    sections.forEach(s => observer.observe(s));
+
+    // Close sidebar on outside click (mobile)
+    document.addEventListener('click', e => {
+      const sidebar = document.getElementById('sidebar');
+      const toggle = document.getElementById('sidebarToggle');
+      if (sidebar.classList.contains('open') && !sidebar.contains(e.target) && e.target !== toggle) {
+        sidebar.classList.remove('open');
+        toggle.textContent = '☰';
+      }
+    });
+  </script>
 
 </body>
+
 </html>
