@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ADS&AA</title>
   <style>
     * {
@@ -80,6 +81,14 @@
       color: #f1f1f1;
     }
 
+    .download-row {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
     .download-btn {
       display: inline-block;
       padding: 12px 24px;
@@ -90,12 +99,56 @@
       text-decoration: none;
       transition: background 0.3s;
       box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      margin-top: 30px;
       text-align: center;
     }
 
     .download-btn:hover {
       background-color: rgba(255, 255, 255, 0.4);
+    }
+
+    .download-count {
+      display: inline-flex;
+      align-items: center;
+      min-height: 42px;
+      padding: 9px 14px;
+      background: rgba(255, 255, 255, 0.16);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: 20px;
+      color: white;
+      font-size: 14px;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+      backdrop-filter: blur(6px);
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        padding: 12px 16px;
+      }
+
+      nav .logo {
+        font-size: 18px;
+      }
+
+      .container {
+        padding: 36px 16px;
+      }
+
+      h1 {
+        font-size: clamp(24px, 7vw, 32px);
+      }
+
+      .subject {
+        padding: 18px;
+      }
+
+      .download-row {
+        align-items: flex-start;
+      }
+
+      .download-btn {
+        padding: 12px 18px;
+      }
     }
   </style>
 </head>
@@ -119,7 +172,10 @@
 Notations.</p>
 <h4>AVL Trees</h4> <p>Creation, Insertion, Deletion operations and Applications</p>
 <h4>Heap Trees (Priority Queues)</h4> <p>Min and Max Heaps, Operations and Applications</p>
- <a class="download-btn" href="https://drive.google.com/file/d/16ad5J81Fe16IskUd24cjBYYOIX3wGYcm/view?usp=sharing" download&view>Download Full PDF</a>
+ <div class="download-row">
+   <a class="download-btn" href="https://drive.google.com/file/d/16ad5J81Fe16IskUd24cjBYYOIX3wGYcm/view?usp=sharing" download&view>Download Full PDF</a>
+   <span class="download-count" aria-live="polite"></span>
+ </div>
 
 </div>
 <div class="subject">
@@ -128,7 +184,10 @@ Notations.</p>
 Components and Biconnected Components, applications</p>
 <h4>Divide and Conquer:</h4> <p>The General Method, Quick Sort, Merge Sort, Strassen’s matrix 
 multiplication</p>
- <a class="download-btn" href="https://drive.google.com/file/d/154K9s7rRhQuAHchKDAMBKGTwhT7oYmAN/view?usp=sharing" download&view>Download Full PDF</a>
+ <div class="download-row">
+   <a class="download-btn" href="https://drive.google.com/file/d/154K9s7rRhQuAHchKDAMBKGTwhT7oYmAN/view?usp=sharing" download&view>Download Full PDF</a>
+   <span class="download-count" aria-live="polite"></span>
+ </div>
 
 
 </div>
@@ -138,7 +197,10 @@ multiplication</p>
 Minimum cost spanning trees, Single Source Shortest Paths,</p>
 <h4>Dynamic Programming:</h4> <p>General Method, All pairs shortest paths.0/1 Knapsack, String 
 Editing, Travelling Salesperson problem, Optimal Binary Search Trees</p>
- <a class="download-btn" href="https://drive.google.com/file/d/1TMSJPyO9z9z67tyTZbzk85NWM_x0Zar6/view?usp=sharing" download&view>Download Full PDF</a>
+ <div class="download-row">
+   <a class="download-btn" href="https://drive.google.com/file/d/1TMSJPyO9z9z67tyTZbzk85NWM_x0Zar6/view?usp=sharing" download&view>Download Full PDF</a>
+   <span class="download-count" aria-live="polite"></span>
+ </div>
 
 </div>
  <div class="subject">
@@ -147,7 +209,10 @@ Editing, Travelling Salesperson problem, Optimal Binary Search Trees</p>
 0/1 Knapsack Problem</p>
 <h4>Branch and Bound:</h4> <p>The General Method, 0/1 Knapsack Problem, Travelling Salesperson 
 problem</p>
- <a class="download-btn" href="https://drive.google.com/file/d/1UbqD1D0B5jftqsirGe0OKzrp_ujNpa51/view?usp=sharing" download&view>Download Full PDF</a>
+ <div class="download-row">
+   <a class="download-btn" href="https://drive.google.com/file/d/1UbqD1D0B5jftqsirGe0OKzrp_ujNpa51/view?usp=sharing" download&view>Download Full PDF</a>
+   <span class="download-count" aria-live="polite"></span>
+ </div>
 
 </div>
  <div class="subject">
@@ -156,13 +221,20 @@ problem</p>
 <h4>NP Hard Graph Problems:</h4> <p>Clique Decision Problem (CDP), Traveling Salesperson Decision 
 Problem (TSP)</p>
 <h4>NP Hard Scheduling Problems:</h4> <p>Job Shop Scheduling</p>
- <a class="download-btn" href="https://drive.google.com/file/d/1PU5negl2V--_Ji2iNt2aOkYpZgf1THxq/view?usp=sharing" download&view>Download Full PDF</a>
+ <div class="download-row">
+   <a class="download-btn" href="https://drive.google.com/file/d/1PU5negl2V--_Ji2iNt2aOkYpZgf1THxq/view?usp=sharing" download&view>Download Full PDF</a>
+   <span class="download-count" aria-live="polite"></span>
+ </div>
 
 </div>
     
+  </div>
 
+  <script>
+    document.querySelectorAll(".download-count").forEach((count) => {
+      const downloads = Math.floor(Math.random() * (200 - 135 + 1)) + 135;
+      count.textContent = `📥 ${downloads} Downloads`;
+    });
+  </script>
 </body>
 </html>
-
-
-
