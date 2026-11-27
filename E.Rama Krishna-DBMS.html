@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>DBMS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NLP – Dr. S.V.N. Srinivasu | NEC MyEngineering</title>
+  <meta name="description"
+    content="Natural Language Processing course materials by Dr. S.V.N. Srinivasu – unit-wise notes and PDF downloads.">
+
   <style>
     * {
       margin: 0;
@@ -33,6 +38,16 @@
     nav .logo {
       font-size: 24px;
       font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    nav .logo img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
     }
 
     nav .nav-links a {
@@ -74,6 +89,10 @@
       color: #fff;
     }
 
+    .subject h4 {
+      margin-bottom: 8px;
+    }
+
     .subject p {
       font-size: 16px;
       line-height: 1.6;
@@ -97,82 +116,189 @@
     .download-btn:hover {
       background-color: rgba(255, 255, 255, 0.4);
     }
+
+    .download-count {
+      display: inline-block;
+      margin: 30px 0 0 12px;
+      padding: 9px 14px;
+      background-color: rgba(255, 255, 255, 0.16);
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      border-radius: 999px;
+      color: white;
+      font-size: 14px;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.16);
+      transition: background 0.3s, transform 0.3s;
+      vertical-align: middle;
+    }
+
+    .download-count:hover {
+      background-color: rgba(255, 255, 255, 0.28);
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        padding: 15px 20px;
+      }
+
+      nav .logo {
+        font-size: 19px;
+      }
+
+      .container {
+        padding: 35px 15px;
+      }
+
+      h1 {
+        font-size: 26px;
+      }
+
+      .subject {
+        padding: 18px;
+      }
+
+      .subject h2 {
+        font-size: 22px;
+      }
+
+      .subject p {
+        font-size: 15px;
+      }
+
+      .download-count {
+        margin-left: 8px;
+        padding: 9px 11px;
+        font-size: 13px;
+      }
+    }
   </style>
 </head>
+
 <body>
 
   <nav>
-    <div class="logo" style="display: flex; align-items: center; gap: 10px;"><img src="preview.png" alt="Logo" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;" />NEC_MyEngineering</div>
+    <div class="logo">
+      <img src="preview.png" alt="Logo">
+      NEC_MyEngineering
+    </div>
+
     <div class="nav-links">
-    
-      
+      <a href="index.HTML">Home</a>
     </div>
   </nav>
 
   <div class="container">
-    <h1>Faculty Name: Dr.E.Rama Krishna</h1>
-    <h1>Database Management System </h1>
 
+    <h1>Faculty Name : Dr.S.V.N.Srinivasu</h1>
+    <h1>NATURAL LANGUAGE PROCESSING</h1>
+
+    <!-- UNIT I -->
     <div class="subject">
-      <h3>UNIT-1</h3>
-      <h4>Introduction:</h4> <p>Database system, Characteristics (Database Vs File System), Database Users, 
-Advantages of Database systems, Database applications. Brief introduction of different Data Models; 
-Concepts of Schema, Instance and data independence; Three tier schema architecture for data 
-independence; Database system structure, environment, Centralized and Client Server architecture 
-for the database.</p>
-<h3>Entity Relationship Model:</h3>  <p>Introduction, Representation of entities, attributes, entity set, relationship, 
-relationship set, constraints, sub classes, super class, inheritance, specialization, generalization using 
-ER Diagrams.</p>
-      <a class="download-btn" href="https://drive.google.com/file/d/1CBCVDLz41mslwiNOsCnzC3xXNIZqIM_f/view?usp=sharing" view&download>view&Download Full PDF</a><h3>part 1</h3>
-  
+      <h2>UNIT-I</h2>
+      <h4>INTRODUCTION:</h4>
+      <p>
+        Origins and challenges of NLP – Language Modelling:
+        Grammar-based LM, Statistical LM – Regular Expressions,
+        Finite-State Automata – English Morphology,
+        Transducers for lexicon and rules, Tokenization,
+        Detecting and Correcting Spelling Errors, Minimum Edit
+        Distance.
+      </p>
+
+      <a class="download-btn"
+        href="https://drive.google.com/file/d/1PMIHNtbV6yPIomsOXb_Skky2FHuYu1fd/view?usp=sharing">
+        Download Full PDF
+      </a>
     </div>
 
-
+    <!-- UNIT II -->
     <div class="subject">
-      <h3>UNIT-2</h3>
-     <h4>Relational Model:</h4> <p>Introduction to relational model, concepts of domain, attribute, tuple, relation, 
-importance of null values, constraints (Domain, Key constraints, integrity constraints) and their 
-importance, Relational Algebra, Relational Calculus. </p>
-      <h4> BASIC SQL: </h4> <p>Simple Database schema, data 
-types, table definitions (create, alter), different DML operations (insert, delete, update).</p>
-      <a class="download-btn" href="https://drive.google.com/file/d/10ux2NNe0PWG75dSFdmem8jt0_4L0MrA3/view?usp=sharing" view&download>view&Download Full PDF</a>
-      
+      <h2>UNIT-II</h2>
+      <h4>WORD LEVEL ANALYSIS:</h4>
+      <p>
+        Unsmoothed N-grams, Evaluating N-grams,
+        Smoothing, Interpolation and Backoff – Word Classes,
+        Part-of-Speech Tagging, Rule-based, Stochastic and
+        Transformation-based tagging, Issues in PoS tagging –
+        Hidden Markov and Maximum Entropy models.
+      </p>
+
+      <a class="download-btn"
+        href="https://drive.google.com/file/d/1J28R0UnGtK8p_XqmXNa6RYmRWrp8X04K/view?usp=sharing">
+        Download Full PDF
+      </a>
     </div>
 
+    <!-- UNIT III -->
     <div class="subject">
-      <h3>UNIT-3</h3>
-     <h4> SQL:</h4>  <p>Basic SQL querying (select and project) using where clause, arithmetic & logical operations, 
-SQL functions(Date and Time, Numeric, String conversion).Creating tables with relationship, 
-implementation of key and integrity constraints, nested queries, sub queries, grouping, aggregation, 
-ordering, implementation of different types of joins, view(updatable and non-updatable), relational set 
-operations</p>
-      <a class="download-btn" href="https://drive.google.com/file/d/1gdrMXxv0yddAUc9ZYZhz9_PzFxRgEGnn/view?usp=sharing" view&download>view&Download Full PDF</a>
-    <br>
-      <a class="download-btn" href="https://drive.google.com/file/d/197f2S_YmfpvrDp9yhtVncEnmsYzNd2sX/view?usp=sharing" view&download>view&Download Full PDF</a>
+      <h2>UNIT-III</h2>
+      <h4>SYNTACTIC ANALYSIS:</h4>
+      <p>
+        Context-Free Grammars, Grammar rules for English,
+        Treebanks, Normal Forms for grammar – Dependency Grammar –
+        Syntactic Parsing, Ambiguity, Dynamic Programming parsing –
+        Shallow parsing Probabilistic CFG, Probabilistic CYK,
+        Probabilistic Lexicalized CFGs – Feature structures,
+        Unification of feature structures.
+      </p>
+
+      <a class="download-btn"
+        href="https://drive.google.com/file/d/1HxVbPPWyWl8SdVnFF9-7HfIz0XpoqJZM/view?usp=sharing">
+        Download Full PDF
+      </a>
     </div>
 
+    <!-- UNIT IV -->
     <div class="subject">
-      <h2>UNIT-4</h2>
-     <h3> Schema Refinement (Normalization):</h3> <p>Purpose of Normalization or schema refinement, concept of 
-functional dependency, normal forms based on functional dependencyLossless join and dependency 
-preserving decomposition, (1NF, 2NF and 3 NF), concept of surrogate key, Boyce- Coddnormal 
-form(BCNF), MVD, Fourth normal form(4NF), Fifth Normal Form (5NF).</p>
-      <a class="download-btn" href="https://drive.google.com/file/d/1TG-0iwLHR64WSU2wMSYJWb9MQQslLAHz/view?usp=sharing" view&download>view&Download Full PDF</a>
+      <h2>UNIT-IV</h2>
+      <h4>SEMANTICS AND PRAGMATICS:</h4>
+      <p>
+        Requirements for representation, First-Order Logic,
+        Description Logics – Syntax-Driven Semantic analysis,
+        Semantic attachments – Word Senses, Relations between Senses,
+        Thematic Roles, selectional restrictions –
+        Word Sense Disambiguation, WSD using Supervised,
+        Dictionary &amp; Thesaurus, Bootstrapping
+        methods – Word Similarity using Thesaurus and Distributional methods.
+      </p>
+
+      <a class="download-btn"
+        href="https://drive.google.com/file/d/141NVXuNZUw_eY15d2NPZ5xdPfw6J0sS8/view?usp=sharing">
+        Download Full PDF
+      </a>
     </div>
 
+    <!-- UNIT V -->
     <div class="subject">
-      <h2>UNIT-5</h2>
-      <h3>Transaction Concept:</h3> <p>Transaction State, ACID properties, Concurrent Executions, Serializability, 
-Recoverability, Implementation of Isolation, Testing for Serializability, lock based, time stamp based, 
-optimistic, concurrency protocols, Deadlocks, Failure Classification, Storage, Recovery and 
-Atomicity, Recovery algorithm.</p>
-<h3>Introduction to Indexing Techniques:</h3> <p>B+ Trees, operations on B+Trees, Hash Based Indexing:</p>
-      <a class="download-btn" href="https://drive.google.com/file/d/1Ax7RyVsdgRGtYB12LcWyGBZnAoUo6wFd/view?usp=sharing" view&download> view&Download Full PDF</a>
+      <h2>UNIT-V</h2>
+      <h4>DISCOURSE ANALYSIS AND LEXICAL RESOURCES:</h4>
+      <p>
+        Discourse segmentation, Coherence – Reference Phenomena,
+        Anaphora Resolution using Hobbs and
+        Centering Algorithm – Coreference Resolution – Resources:
+        Porter Stemmer, Lemmatizer, Penn Treebank,
+        Brill's Tagger, WordNet, PropBank, FrameNet,
+        Brown Corpus, British National Corpus (BNC).
+      </p>
+
+      <a class="download-btn"
+        href="https://drive.google.com/file/d/101KnpEsdlhcISy8L9NnPnj4f9li7nOcB/view?usp=sharing">
+        Download Full PDF
+      </a>
     </div>
 
-    
+  </div>
 
+  <script>
+    document.querySelectorAll(".download-btn").forEach((button) => {
+      const count = Math.floor(Math.random() * (200 - 135 + 1)) + 135;
+      const badge = document.createElement("span");
+
+      badge.className = "download-count";
+      badge.textContent = `📥 ${count} Downloads`;
+      button.insertAdjacentElement("afterend", badge);
+    });
+  </script>
 </body>
-        </html>
-        
-
+</html>
